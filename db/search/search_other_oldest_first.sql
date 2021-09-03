@@ -1,0 +1,5 @@
+SELECT post_id, title, content, img, author_id, date_created, author_username
+FROM helo_posts
+JOIN helo_posts ON helo_users
+WHERE author_id != $1
+ORDER BY date_created DESC;
